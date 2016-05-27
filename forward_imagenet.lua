@@ -32,7 +32,7 @@ trainData=torch.load('./provider_train.t7')
 total=trainData.labels:size()[1]
 print(total)
 forward = {
-    data = torch.Tensor(total, 256*14*14), --- 100 for regular nin, 384*7*7 for truncated 1, 256*14*14 for truncated 2, 96*28*28 for truncated 3
+    data = torch.Tensor(total, 256*14*14), --- 1000 for regular nin, 384*7*7 for truncated 1, 256*14*14 for truncated 2, 96*28*28 for truncated 3
     labels = torch.Tensor(total),
     size = function() return total end,
 }
@@ -45,7 +45,7 @@ testData=torch.load('./provider_test.t7')
 total=testData.labels:size()[1]
 print(total)
 forward = {
-    data = torch.Tensor(total, 256*14*14), --- 100 for regular nin, 384*7*7 for truncated 1, 256*14*14 for truncated 2, 96*28*28 for truncated 3
+    data = torch.Tensor(total, 256*14*14), --- 1000 for regular nin, 384*7*7 for truncated 1, 256*14*14 for truncated 2, 96*28*28 for truncated 3
     labels = torch.Tensor(total),
     size = function() return total end,
 }
